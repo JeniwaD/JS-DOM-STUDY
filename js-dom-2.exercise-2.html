@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS-DOM-2 Example 2</title>
+  </head>
+  <body>
+    <input id="fullname" type="text" placeholder="Full Name" />
+    <input id="nickname" type="text" placeholder="NickName" />
+    <input id="age" type="text" placeholder="Age" />
+    <input id="email" type="text" placeholder="Email" />
+    <button onClick="createHTML()">Submit</button>
+    <h1 id="h1-display"></h1>
+    <ul id="ule"></ul>
+  </body>
+  <script type="text/javascript">
+    const createHTML = () => {
+      const fullname = document.querySelector("#fullname");
+      const nickname = document.querySelector("#nickname");
+      const age = document.querySelector("#age");
+      const email = document.querySelector("#email");
+      // select ul first here
+      const h1Element = document.querySelector("#h1-display");
+      h1Element.innerHTML = "Fullname: " + fullname.value;
+
+      const listUL = document.querySelector("#ule");
+      listUL.innerHTML = `<li>NickName: ${nickname.value}</li> <li>Age: ${age.value}</li> <li>Email: ${email.value}</li>` // code here
+    };
+  </script>
+</html>
