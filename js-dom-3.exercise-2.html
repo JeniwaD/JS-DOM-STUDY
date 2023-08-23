@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JS-DOM-3 Exercise 2</title>
+  </head>
+  <body>
+    <input
+      type="text"
+      id="fullname"
+      onChange="fullNameType(event)"
+      placeholder="Enter your full-name"
+    />
+
+    <input
+      type="text"
+      id="nickname"
+      onChange="nickNameType(event)"
+      placeholder="Enter your nickname"
+    />
+
+    <h3>Fullname:</h3>
+    <div id="fullname-display"></div>
+    <h3>Nickname:</h3>
+    <div id="nickname-display"></div>
+
+    <script>
+      const input1 = document.getElementById("fullname"); //มีไว้ดู เอาไว้ใช้กับอันอื่น
+
+    function fullNameType(event) { //เลือกถูกกล่องอยู่แล้ว
+      const fullNameFill = event.target.value;
+      const fullNameDisplay = document.querySelector("#fullname-display");
+      fullNameDisplay.innerHTML = fullNameFill;
+    }
+
+    const input2 = document.getElementById("nickname"); //มีไว้ดู เอาไว้ใช้กับอันอื่น
+    
+    function nickNameType(event) {//เลือกถูกกล่องอยู่แล้ว
+      const nickNameFill = event.target.value;
+      const nickNameDisplay = document.querySelector("#nickname-display");
+      nickNameDisplay.innerHTML = nickNameFill;
+    }
+
+    </script>
+  </body>
+</html>

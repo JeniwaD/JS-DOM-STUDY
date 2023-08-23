@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JS-DOM-3 Exercise 1</title>
+  </head>
+  <body>
+    <select id="mySelect" onChange="choiceSelector(event)">
+      <option value="programmer">Programmer</option>
+      <option value="doctor">Doctor</option>
+      <option value="creator">Creator</option>
+    </select>
+
+    <script>
+      // write your function here.
+      function choiceSelector(event) {
+        const choiceValue = event.target; //.value เอาอันล่างออกก็ได้
+        alert(choiceValue.value); //เอาevent ออก ใช้ queryselector แทนได้
+      }
+    </script>
+  </body>
+</html>
